@@ -16,6 +16,26 @@ class Boggle:
         self.dictionary = dictionary
         self.solutions = set()   # store unique words found
 
+    def setGrid(self, grid):
+        """
+        Setter method to update the game grid.
+
+        Parameters:
+        grid (2D array of strings): New NxN board of letters
+        """
+        self.grid = grid
+        self.solutions = set()  # reset solutions when grid changes
+
+    def setDictionary(self, dictionary):
+        """
+        Setter method to update the dictionary.
+
+        Parameters:
+        dictionary (list of strings): New list of valid words
+        """
+        self.dictionary = dictionary
+        self.solutions = set()  # reset solutions when dictionary changes
+
     def getSolution(self):
         """
         Main solver method to find all valid words in the grid.
